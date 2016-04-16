@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.fbulou.hellohealth.DonorActivity"
+    tools:showIn="@layout/activity_donor">
+
+    <Button
+        android:id="@+id/mCreateDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="createDB"
+        android:text="Create Database" />
+
+    <LinearLayout
+        android:id="@+id/mToCreateDBlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/mAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="addContact"
+            android:text="Add Contact" />
+
+        <Button
+            android:id="@+id/mGetContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="getContacts"
+            android:text="Get Contacts" />
+
+        <Button
+            android:id="@+id/mDeleteContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="deleteContact"
+            android:text="Delete Contact" />
+
+        <EditText
+            android:id="@+id/mNameEdittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Blood Group : " />
+
+            <Spinner
+                android:id="@+id/mBloodGroupSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/mContactEdittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Contact No."
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/mIDEdittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ID to delete"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/mDeleteDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="deleteDB"
+            android:text="Delete Database" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mResultTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
